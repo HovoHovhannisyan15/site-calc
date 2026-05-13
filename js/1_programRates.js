@@ -24,11 +24,13 @@ const programInputs = document.querySelectorAll('input[name="program"]');
 const totalPercent = document.querySelector('#total-percent');
 
 programInputs.forEach((input) => {
+    // отображение ставки на старте 
+    if (input.checked) {
+        totalPercent.innerText = percentFormatter.format(input.value);
+    }
 
-
-
+    // ставка при преключении  
     input.addEventListener('click', function () {
-        console.log(this.value);
         totalPercent.innerText = percentFormatter.format(this.value);
     })
 })
