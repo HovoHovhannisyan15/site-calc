@@ -42,5 +42,10 @@ function calcMortgage() {
 
     // срок ипотеки в месяцах
     const months = years * 12;
+
+    // Расчет ежемесячного платежа 
+    const monthPayment = (totalAmount * monthRate) / 1 - (1 + monthRate);
+
+    // 1:47
 }
 
